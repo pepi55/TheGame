@@ -11,7 +11,7 @@ public class Parrallax : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		pos.x -= 0.1f;
+		pos.x -= 5f * Time.deltaTime;
 
 		if (pos.x <= -16f) {
 			pos.x = 16f;
