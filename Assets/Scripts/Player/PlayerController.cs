@@ -2,14 +2,14 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-	private Vector2 pos;
+	public static Vector2 pos;
 
 	void Start () {
 		pos = transform.position;
 	}
 
 	void OnEnable () {
-		GameController.StartGame += Move; Debug.Log("added");
+		GameController.StartGame += Move;
 		GameController.PlayerInput += ButtonPress;
 	}
 
@@ -19,10 +19,9 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void Move () {
-		Debug.Log("test");
-		if (pos.x <= -3f) {
-			pos.x += 3f * Time.deltaTime;
-		}
+		pos.x += 3f * Time.deltaTime;
+
+		transform.position = pos;
 	}
 
 	private void ButtonPress () {
