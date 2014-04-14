@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMovement : MonoBehaviour {
-
-	private 
-
-
+public class EnemyHealth : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,10 +9,7 @@ public class EnemyMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
-	{
+	void Update () {
 	
-		
-
-	} 
+	}
 }
