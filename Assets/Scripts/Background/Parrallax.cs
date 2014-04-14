@@ -4,13 +4,19 @@ using System.Collections;
 public class Parrallax : MonoBehaviour {
 	private Vector2 pos;
 
-	// Use this for initialization
 	void Start () {
 		pos = transform.position;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void OnEnable () {
+		GameController.ScrollScreen += Scroll;
+	}
+
+	void OnDisable () {
+		GameController.ScrollScreen -= Scroll;
+	}
+
+	void Scroll () {
 		pos.x -= 5f * Time.deltaTime;
 
 		if (pos.x <= -16f) {
